@@ -8,13 +8,15 @@ const web3 = new Web3('https://api.truescan.net/rpc')
 const contractAddress = '0x6e5E51D7120ddaA0F2d88d51b99029FC32ECfAD5'
 const contractObj = new web3.eth.Contract(abi, contractAddress)
 
+// console.log(web3.utils.toWei("1", "ether"))
+// 1 eth = 1000000000000000000
+
 // 导入账户，用于支付交易产生的手续费
 var privateKey,account;
 document.querySelector('#add-button').onclick = function setAdd () {
   privateKey = document.querySelector('#add').value
   account = web3.eth.accounts.privateKeyToAccount(privateKey)
   web3.eth.accounts.wallet.add(account)
-  console.log(account.address)
   //console.log(web3.eth.accounts.wallet)
 }
 
