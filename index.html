@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demo</title>
+</head>
+<body>
+  <h1>Web3使用Demo</h1>
+  <a target="_blank" href="https://web3js.readthedocs.io/en/1.0/">web3使用文档</a>
+
+  <div>
+    <label for="add">设置输入私钥</label>
+    <input id="add" type="text" placeholder="输入私钥">
+    <button id="add-button">确认</button>
+    <span id="add-states"></span>
+  </div>
+
+  <div>
+    <label for="set">设置储存内容</label>
+    <input id="set" type="text" placeholder="输入要上链存储的内容">
+    <button id="set-button">确认</button>
+    <span id="set-states"></span>
+  </div>
+  <div>
+    <span onclick="getValue">查看储存内容</span>
+    <button id="get-button">确认</button>
+    <span id="get"></span>
+  </div>
+</body>
+<script src="./js/web3.min.js"></script>
+<script src="./sol/abi.js"></script>
+<script src="./js/main.js"></script>
+</html>
